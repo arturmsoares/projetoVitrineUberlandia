@@ -1,29 +1,47 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Header.css'
  
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <section className='header-container'>
         <img src="/logoVitrineUberlandia.png" alt="logo" />
-        <nav className='nav-header'>
+        
+        {/* Botão hambúrguer para mobile */}
+        <button 
+          className={`menu-toggle ${isMenuOpen ? 'active' : ''}`}
+          onClick={toggleMenu}
+          aria-label="Toggle menu"
+        >
+          <span className="hamburger-line"></span>
+          <span className="hamburger-line"></span>
+          <span className="hamburger-line"></span>
+        </button>
+
+        <nav className={`nav-header ${isMenuOpen ? 'active' : ''}`}>
             <ul>
                 <li>
-                    <a href="#">Divulgações</a>
+                    <a href="#" onClick={() => setIsMenuOpen(false)}>Divulgações</a>
                 </li>
                 <li>
-                    <a href="#">Métricas</a>
+                    <a href="#" onClick={() => setIsMenuOpen(false)}>Métricas</a>
                 </li>
                 <li>
-                    <a href="#">Depoimentos</a>
+                    <a href="#" onClick={() => setIsMenuOpen(false)}>Depoimentos</a>
                 </li>
                 <li>
-                    <a href="#">Parcerias</a>
+                    <a href="#" onClick={() => setIsMenuOpen(false)}>Parcerias</a>
                 </li>
                 <li>
-                    <a href="#">Faq</a>
+                    <a href="#" onClick={() => setIsMenuOpen(false)}>Faq</a>
                 </li>
                 <li>
-                    <a href="#">Entre em Contato</a>
+                    <a href="#" onClick={() => setIsMenuOpen(false)}>Entre em Contato</a>
                 </li>
             </ul>
         </nav>
