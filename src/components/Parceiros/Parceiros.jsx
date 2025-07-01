@@ -7,7 +7,7 @@ const Parceiros = () => {
       <div className='partners-content'>
         <div className='partners-header'>
           <h2>Sua marca na vitrine</h2>
-          <p>Destaque o melhor da sua marca: alcance, engajamento e conexão no instagram</p>
+          <p>Destaque o melhor da sua marca: alcance, engajamento e conexões no instagram.</p>
         </div>
         
         <div className='partners-grid'>
