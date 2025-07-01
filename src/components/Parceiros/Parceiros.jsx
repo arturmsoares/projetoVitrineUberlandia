@@ -3,7 +3,7 @@ import './Parceiros.css'
 
 const Parceiros = () => {
   return (
-    <section className='partners-container' >
+    <section id='parcerias' className='partners-container' >
       <div className='partners-content'>
         <div className='partners-header'>
           <h2>Sua marca na vitrine</h2>

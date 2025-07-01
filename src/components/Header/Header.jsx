@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
-import './Header.css'
- 
+import React, { useState } from "react";
+import "./Header.css";
+
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -8,45 +8,73 @@ const Header = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+    setIsMenuOpen(false);
+  };
+
   return (
-    <section className='header-container'>
-        <img src="/logoVitrineUberlandia.png" alt="logo" />
-        
-        {/* Botão hambúrguer para mobile */}
-        <button 
-          className={`menu-toggle ${isMenuOpen ? 'active' : ''}`}
-          onClick={toggleMenu}
-          aria-label="Toggle menu"
-        >
-          <span className="hamburger-line"></span>
-          <span className="hamburger-line"></span>
-          <span className="hamburger-line"></span>
-        </button>
+    <section className="header-container">
+      <img src="/logoVitrineUberlandia.png" alt="logo" />
 
-        <nav className={`nav-header ${isMenuOpen ? 'active' : ''}`}>
-            <ul>
-                <li>
-                    <a href="#" onClick={() => setIsMenuOpen(false)}>Divulgações</a>
-                </li>
-                <li>
-                    <a href="#" onClick={() => setIsMenuOpen(false)}>Métricas</a>
-                </li>
-                <li>
-                    <a href="#" onClick={() => setIsMenuOpen(false)}>Depoimentos</a>
-                </li>
-                <li>
-                    <a href="#" onClick={() => setIsMenuOpen(false)}>Parcerias</a>
-                </li>
-                <li>
-                    <a href="#" onClick={() => setIsMenuOpen(false)}>Faq</a>
-                </li>
-                <li>
-                    <a href="#" onClick={() => setIsMenuOpen(false)}>Entre em Contato</a>
-                </li>
-            </ul>
-        </nav>
+      <button
+        className={`menu-toggle ${isMenuOpen ? "active" : ""}`}
+        onClick={toggleMenu}
+        aria-label="Toggle menu"
+      >
+        <span className="hamburger-line"></span>
+        <span className="hamburger-line"></span>
+        <span className="hamburger-line"></span>
+      </button>
+
+      <nav className={`nav-header ${isMenuOpen ? "active" : ""}`}>
+        <ul>
+          <li>
+            <a
+              href="#divulgacoes"
+              onClick={() => scrollToSection("divulgacoes")}
+            >
+              Divulgações
+            </a>
+          </li>
+          <li>
+            <a href="#parcerias" onClick={() => scrollToSection("parcerias")}>
+              Parcerias
+            </a>
+          </li>
+          <li>
+            <a href="#metricas" onClick={() => scrollToSection("metricas")}>
+              Métricas
+            </a>
+          </li>
+          <li>
+            <a
+              href="#depoimentos"
+              onClick={() => scrollToSection("depoimentos")}
+            >
+              Depoimentos
+            </a>
+          </li>
+          <li>
+            <a href="#faq" onClick={() => scrollToSection("faq")}>
+              Faq
+            </a>
+          </li>
+          <li>
+            <a href="#contato" onClick={() => scrollToSection("contato")}>
+              Entre em Contato
+            </a>
+          </li>
+        </ul>
+      </nav>
     </section>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
