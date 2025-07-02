@@ -26,7 +26,7 @@ const HeroSection = () => {
             <button className='partner-btn'>Seja um parceiro!</button>
             <div className='social-icons'>
               <a href="#" className='whatsapp-icon'>
-                <img src="/whatsapp.png" alt="WhatsApp" onClick={() => window.open('https://wa.me/5534999999999', '_blank')} />
+                <img src="/whatsapp.png" alt="WhatsApp" onClick={() => window.open('https://wa.me/5534991954278', '_blank')} />
               </a>
               <a href="#" className='instagram-icon'>
                 <img src="/Instagram.png" alt="Instagram" onClick={() => window.open('https://www.instagram.com/vitrine_uberlandia/', '_blank')} />
