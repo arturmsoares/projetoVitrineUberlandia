@@ -1,0 +1,11 @@
+.containerMetricas {
+    border: 1px solid black;
+}
+
+.containerMetricas div{
+    border: 1px solid pink;
+}
+
+.containerMetricas div  {
+    color: blue;
+}
