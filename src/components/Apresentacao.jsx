@@ -1,13 +1,11 @@
+import style from './Apresentacao.module.css';
+
 const Apresentacao = ({tituloSecao, paragrafoSecao}) => {
     return (
-        <section>
-            <div>
+        <div className={style.apresentacao}>
                 <h3>{tituloSecao}</h3>
-            </div>
-            <div>
                 <p>{paragrafoSecao}</p>
-            </div>
-        </section>
+        </div>
     );
 }
 

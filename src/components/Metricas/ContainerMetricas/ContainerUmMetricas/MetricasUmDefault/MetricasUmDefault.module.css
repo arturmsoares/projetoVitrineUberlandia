@@ -1,0 +1,16 @@
+
+.metricaUnica {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+
+.metricaUnica > p:nth-child(2){
+    background-color: #7D0000;
+    border-radius: 8px;
+    color: white;
+    width: 60%;
+    padding:10px;
+}

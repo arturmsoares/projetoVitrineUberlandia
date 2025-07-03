@@ -2,9 +2,9 @@ import style from './MetricasUmDefault.module.css';
 
 function MetricasUmDefault({textoMetrica, numerosMetrica}) {
   return (
-    <div>
+    <div className={style.metricaUnica}>
             <p>{textoMetrica}</p>
-            <p className={style.numMetrica}>{numerosMetrica}</p>
+            <p>{numerosMetrica}</p>
     </div>
 
   );
