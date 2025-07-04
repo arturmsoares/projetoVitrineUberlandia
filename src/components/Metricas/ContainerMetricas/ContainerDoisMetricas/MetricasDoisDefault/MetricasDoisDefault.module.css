@@ -1,61 +1,29 @@
-/* Definição da sua cor principal */
-:root {
-  --brand-rosy-brown: #DD3B36;
-}
-
-.metricCard {
+.containerGrafico {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  margin: 10px;
 }
 
-.progressCircle {
-  position: relative;
-  width: 160px; /* Largura conforme a imagem */
-  height: 160px; /* Altura conforme a imagem */
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: sans-serif;
+.titulo {
   font-weight: bold;
-  color: var(--brand-rosy-brown);
-  font-size: 2.5em; /* Um pouco maior para se assemelhar à imagem */
-
-  /* * AQUI ESTÁ A MUDANÇA PRINCIPAL:
-   * Usamos a variável --p para definir dinamicamente o gradiente cônico.
-   * A função calc() garante que a unidade de porcentagem seja aplicada corretamente.
-   */
-  background: conic-gradient(
-    var(--brand-rosy-brown) 0% calc(1% * var(--p)),
-    #EEEEEE calc(1% * var(--p)) 100%
-  );
+  color: #7c0000;
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
 }
 
-/* Cria o "buraco" do meio para o efeito de rosca */
-.progressCircle::before {
-  content: '';
+.wrapper {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.valorCentro {
   position: absolute;
-  /* Ajustando a espessura para ficar mais fiel à imagem (anel mais grosso) */
-  width: calc(100% - 30px); 
-  height: calc(100% - 30px);
-  border-radius: 50%;
-  background-color: #FFFFFF; /* Assumindo fundo branco, mude se necessário */
-  z-index: 1;
-}
-
-/* Garante que o número da porcentagem fique na frente de tudo */
-.progressCircle .percentage {
-  position: relative;
-  z-index: 2;
-}
-
-.label {
-  margin-top: 10px;
-  font-family: sans-serif;
-  font-size: 1.2em;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   font-weight: bold;
-  color: #333;
+  font-size: 1.2rem;
+  color: #7c0000;
+  pointer-events: none;
 }

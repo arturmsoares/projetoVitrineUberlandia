@@ -4,7 +4,7 @@ function MetricasUmDefault({textoMetrica, numerosMetrica}) {
   return (
     <div className={style.metricaUnica}>
             <p>{textoMetrica}</p>
-            <p>{numerosMetrica}</p>
+            <span>{numerosMetrica}</span>
     </div>
 
   );

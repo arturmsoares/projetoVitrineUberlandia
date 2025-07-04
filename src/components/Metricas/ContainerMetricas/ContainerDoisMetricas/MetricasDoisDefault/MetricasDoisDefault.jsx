@@ -1,23 +1,43 @@
+import React from "react";
+import { Doughnut } from "react-chartjs-2";
+import { Chart as ChartJS, ArcElement, Legend } from "chart.js";
+
 import style from "./MetricasDoisDefault.module.css";
 
+ChartJS.register(ArcElement, Legend);
+
+//register registra os componentes do Chart.js que serão usados no gráfico, permitindo que o Doughnut funcione corretamente.
+//Arc
 const MetricasDoisDefault = ({ textoMetrica, numerosMetrica }) => {
-  // Remove o símbolo '%' para obter apenas o valor numérico.
-  const valorPercentual = numerosMetrica.replace('%', '');
+  const data = {
+    labels: [],
+    datasets: [
+      {
+        data: [numerosMetrica, 100 - numerosMetrica],
+        backgroundColor: ["#7c0000", "#e2a8a8"], // vermelho escuro e claro
+        borderWidth: 0,
+        cutout: "70%",
+      },
+    ],
+  };
+
+  const options = {
+    cutout: "70%",
+    plugins: {
+      legend: { display: false }    },
+  };
 
   return (
-    // Certifique-se de que a classe principal aqui é do CSS module.
-    <div className={style.metricCard}>
-      <div 
-        className={style.progressCircle}
-        // A "mágica" acontece aqui: definimos uma variável CSS '--p'
-        // com o valor da nossa porcentagem.
-        style={{ '--p': valorPercentual }}
-      >
-        <span className={style.percentage}>{numerosMetrica}</span>
+    <div className={style.containerGrafico}>
+      <span className={style.titulo}>{textoMetrica}</span>
+      <div className={style.wrapper}>
+        <Doughnut data={data} options={options} />
+        <div className={style.valorCentro}>
+          <span>{numerosMetrica}%</span>
+        </div>
       </div>
-      <span className={style.label}>{textoMetrica}</span>
     </div>
   );
-}
+};
 
 export default MetricasDoisDefault;

@@ -1,3 +1,16 @@
 .containerMetricas {
-    border: 1px solid green;
+    width: var(--Container-Max-laptop, 1140px);
+    max-width: var(--Container-Max-desktop, 1440px);
+    margin: auto;
+}
+
+.containerMetricas> div{
+    margin: 20px;
+}
+
+
+.containerMetricas p{
+    font-size: var(--Font-Size-lead, 20px);
+    font-weight: 400, bold;
+
 }

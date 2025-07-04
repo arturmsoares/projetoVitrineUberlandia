@@ -6,12 +6,12 @@ const ContainerDoisMetricas = () => {
         <div className={style.containerDoisMetricas}>
             <MetricasDoisDefault
                 textoMetrica="Uberlândia"
-                numerosMetrica="76%" />
+                numerosMetrica={76} />
             
             {/* Exemplo de como você pode criar a métrica "Mulher" */}
             <MetricasDoisDefault
                 textoMetrica="Mulher"
-                numerosMetrica="75%" />
+                numerosMetrica={75} />
         </div>
     );
 }
