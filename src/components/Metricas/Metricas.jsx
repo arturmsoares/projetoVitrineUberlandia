@@ -9,6 +9,7 @@ const SectionMetricas = () => {
   return (
     <section className={style.sectionMetricas}>
 
+
       <Apresentacao
         tituloSecao="Metricas"
         paragrafoSecao="Números que conectam: veja como impactamos pessoas e ampliamos o alcance da sua marca." />
