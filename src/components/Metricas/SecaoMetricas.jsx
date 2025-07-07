@@ -2,12 +2,12 @@ import React from "react";
 import Apresentacao from "../Apresentacao.jsx";
 import ContainerUmMetricas from "./ContainerUmMetricas/ContainerUmMetricas.jsx";
 import ContainerDoisMetricas from "./ContainerDoisMetricas/ContainerDoisMetricas.jsx";
-import style from "./Metricas.module.css";
+import style from "./SecaoMetricas.module.css";
 
 
-const SectionMetricas = () => {
+const SecaoMetricas = () => {
   return (
-    <section className={style.sectionMetricas}>
+    <section className={style.secaoMetricas}>
 
 
       <Apresentacao
@@ -26,4 +26,4 @@ const SectionMetricas = () => {
   );
 };
 
-export default SectionMetricas;
+export default SecaoMetricas;

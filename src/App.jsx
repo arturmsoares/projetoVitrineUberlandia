@@ -1,10 +1,10 @@
-import SectionMetricas from "./components/Metricas/Metricas"
+import SecaoMetricas from "./components/Metricas/SecaoMetricas"
 import SecaoDepoimentos from "./components/Depoimentos/SecaoDepoimentos"
 
 function App() {
   return (
     <>
-      <SectionMetricas />
+      <SecaoMetricas />
       <SecaoDepoimentos />
     </>
   )

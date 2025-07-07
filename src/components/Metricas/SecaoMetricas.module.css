@@ -12,7 +12,7 @@
     --Font-Size-lead: 20px; */
 }
 
-.sectionMetricas {
+.secaoMetricas {
     position: relative;
     overflow: hidden;
     /* Permite que o conteúdo interno não transborde */
@@ -23,7 +23,7 @@
 
 
 
-.sectionMetricas::after {
+.secaoMetricas::after {
     content: "";
     position: absolute;
     left: 0;
