@@ -8,27 +8,23 @@ const SecaoDepoimentos = () => {
   return (
     <section className={style.secaoDepoimentos}>
       <Apresentacao tituloSecao="Depoimentos" />
-   <div className={style.wrapperDepoimentos}>
-        <div className={style.containerImagemDepoimentos}>
-          <div className={style.imagemConsultoraWrapper}>
-            <img
-              src="/foto1-Editada.jpg"
-              alt="Consultora"
-              className={style.imagemConsultora}
+      <div className={style.containerImagemDepoimentos}>
+        <div>
+          <img
+            src="/foto1-Editada.jpg"
+            alt="Consultora"
+            className={style.imagemConsultora}
+          />
+        </div>
+        <div>
+          {depoimentos.map((depoimento, index) => (
+            <CardDepoimentos
+              key={index}
+              depoimento={depoimento.depoimento}
+              nome={depoimento.nome}
+              avatar={depoimento.avatar}
             />
-          </div>
-          <div className={style.containerDepoimentos}>
-            <div className={style.gridDepoimentos}>
-              {depoimentos.map((depoimento, index) => (
-                <CardDepoimentos
-                  key={index}
-                  depoimento={depoimento.depoimento}
-                  nome={depoimento.nome}
-                  avatar={depoimento.avatar}
-                />
-              ))}
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>

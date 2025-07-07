@@ -1,28 +1,25 @@
 .cardDepoimentos {
-  background-color: #FFFFFF; /* Fundo branco para os cards */
   border-radius: 8px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-    /* padding: 24px; */
-  /* gap: 20px; */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  background-color: pink;
 }
 
-.depoimento {
+.cardDepoimentos div:nth-child(2) p {
   font-style: italic;
   color: #333;
-  /* margin: 0 0 8px 0; */
   flex-grow: 1; /* Permite que o depoimento ocupe o espaço restante */
 }
 
-.autor {
+.cardDepoimentos div:nth-child(1) {
   display: flex;
   align-items: flex-start;
   gap: 16px;
 }
 
-.autorTexto {
+.cardDepoimentos div:nth-child(2) {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -36,8 +33,7 @@
   object-fit: cover; /* Garante que a imagem preencha o espaço sem distorção */
 }
 
-.nomeAutor {
+.cardDepoimentos div:nth-child(2) span {
   font-weight: bold;
   color: #000;
-  /* margin-top: 0; */
 }
