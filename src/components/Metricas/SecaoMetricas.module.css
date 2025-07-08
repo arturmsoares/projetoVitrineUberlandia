@@ -5,30 +5,39 @@
     box-sizing: border-box;
 }
 
-.conteudoMetricas{
-    max-width: 1366px;
+.conteudoMetricas {
+    width: 1200px;
     margin: auto;
-    padding: 20px; 
+    padding: 20px;
+    border: 1px solid black;
+
 }
 
 .secaoMetricas {
     position: relative;
-    overflow: hidden; /* Garante que o conteúdo não transborde */
+    overflow: hidden;
+    /* Garante que o conteúdo não transborde */
     background: #fff;
-    padding: 60px 0;
+    padding: 64px 0;
 }
 
 .metricasTipoUm,
 .metricasTipoDois {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
     border: 1px solid #7D0000;
     text-align: center;
-    align-items: left;
-    width: 500px;
+    width: 600px;
+    height: 300px;
     padding: 20px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    /* dois colunas de igual largura */
     border-radius: 12px;
     background-color: white;
+    font-size: 1.4rem;
 }
 
 
@@ -50,11 +59,12 @@
     width: 100%;
     position: relative;
     z-index: 2;
-    /* Garante que o conteúdo fique sobre as camadas de fundo */
+    padding: 30px;
 }
 
-.containerMetricas > div {
-    margin: 20px; 
+.containerMetricas>div {
+    margin: 20px; /* Espaçamento entre os blocos para a div filha */
+
 }
 
 

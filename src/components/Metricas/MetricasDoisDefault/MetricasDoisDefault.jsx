@@ -12,7 +12,7 @@ const MetricasDoisDefault = ({ textoMetrica, numerosMetrica }) => {
         data: [numerosMetrica, 100 - numerosMetrica],
         backgroundColor: ["#7c0000", "#e2a8a8"],
         borderWidth: 0,
-        cutout: "90%",
+        cutout: "70%",
       },
     ],
   };
