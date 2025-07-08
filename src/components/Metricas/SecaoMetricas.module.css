@@ -5,22 +5,31 @@
     box-sizing: border-box;
 }
 
-/* Definição de Variáveis (coloque no :root ou no seu elemento principal) */
-:root {
-    /* --Container-Max-laptop: 1140px;
-    --Container-Max-desktop: 1440px;
-    --Font-Size-lead: 20px; */
+.conteudoMetricas{
+    max-width: 1366px;
+    margin: auto;
+    padding: 20px; 
 }
 
 .secaoMetricas {
     position: relative;
-    overflow: hidden;
-    /* Permite que o conteúdo interno não transborde */
+    overflow: hidden; /* Garante que o conteúdo não transborde */
     background: #fff;
-    /* padding: 60px 0; */
-    /* branco acima */
+    padding: 60px 0;
 }
 
+.metricasTipoUm,
+.metricasTipoDois {
+    border: 1px solid #7D0000;
+    text-align: center;
+    align-items: left;
+    width: 500px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-radius: 12px;
+    background-color: white;
+}
 
 
 .secaoMetricas::after {
@@ -33,39 +42,26 @@
     background: url('/uberlandia.jpg') center center/cover no-repeat;
     opacity: 0.35;
     z-index: 0;
-    /* Corte transversal: ajustando os pontos para o efeito desejado */
     clip-path: polygon(0 45%, 100% 30%, 100% 100%, 0 100%);
     pointer-events: none;
 }
 
-/* Container para o conteúdo textual */
 .containerMetricas {
     width: 100%;
     position: relative;
     z-index: 2;
     /* Garante que o conteúdo fique sobre as camadas de fundo */
-
-    /* max-width: var(--Container-Max-laptop); */
-    /* margin: 0 auto; */
-    /* padding: 0 20px; */
-
 }
 
-.containerMetricas>div {
-    /* margin: 20px 0; */
-    /* Ajustado para espaçamento vertical */
+.containerMetricas > div {
+    margin: 20px; 
 }
 
-.containerMetricas p {
-    /* font-size: var(--Font-Size-lead); */
-    /* font-weight: 400; */
-    /* 'font-weight' aceita apenas um valor */
-}
 
-.sectionMetricas::before {
+.secaoMetricas::before {
     content: "";
     position: absolute;
-    top: -20%;
+    top: -15%;
     left: 0;
     width: 247px;
     height: 247px;

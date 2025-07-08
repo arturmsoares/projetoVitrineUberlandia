@@ -1,56 +1,71 @@
-/* Definição da variável de cor, como visto no Figma */
 :root {
-  --brand-marron: #6B0504; /* Cor de fundo da seção */
-  --text-primary: #FFFFFF; /* Cor para o título principal */
+  --brand-marron: #6B0504;
+  --text-primary: #FFFFFF;
 }
 
 .secaoDepoimentos {
-  position: relative; /* Permite posicionamento absoluto dos filhos */
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: var(--brand-marron);
-  overflow: visible; /* Permite que a imagem ultrapasse os limites */
-  /* padding: 128px 24px; */
-
+  padding: 56px;
+  min-height: 480px;
 }
 
-  .secaoDepoimentos h3{
-    color: white;
-  }
+.secaoDepoimentos h3 {
+  color: white;
+  font-weight: bold;
+  margin-bottom: 32px;
+}
 
-  .containerImagemDepoimentos {
+.containerImagemDepoimentos {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   align-items: flex-start;
-  position: relative;
+  width: 100%;
+  gap: 0;
+  position: relative; /* Necessário para posicionar a imagem absolutamente */
+  overflow: visible;   /* Permite que a imagem ultrapasse o container */
 }
 
-.containerImagemDepoimentos div:nth-child(1) {
+.containerImagemDepoimentos > div:nth-child(1) {
   position: relative;
-  z-index: 1;
-  /* Ajuste a largura conforme necessário */
-  margin-right: 32px;
+  z-index: 2;
+  min-width: 340px;
+  max-width: 340px;
+  margin-right: 0;
+  overflow: visible;
+  display: flex;
+  align-items: flex-start;
+  background-color: green;
+  
 }
 
 .imagemConsultora {
-  display: block;
-  /* Permite que a imagem ultrapasse o limite inferior da seção */
-  position: relative;
-  bottom: -40px; /* Ajuste esse valor para o quanto deseja que ultrapasse */
-  max-width: 220px; /* Ajuste conforme necessário */
+  position: absolute;
+  top: -10px;         /* Colada no topo do div */
+  right: 0;       /* Colada na direita do div */
+  left: -60px;    /* Ultrapassa para a esquerda */
+  bottom: -40px;  /* Ultrapassa para baixo */
+  width: 400px;   /* Ajuste conforme necessário */
   height: auto;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.10);
-  border-radius: 16px;
+  border-radius: 0 16px 16px 0;
   background: #fff;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.10);
+  z-index: 2;
+  object-fit: cover;
+  max-width: none;
 }
 
-
-
-.containerImagemDepoimentos div:nth-child(2) {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #F8FAFC;
+.containerImagemDepoimentos > div:nth-child(2) {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px 16px;
+  background-color: #fff;
+  border-radius: 0 16px 16px 0;
+  padding: 32px 32px 32px 32px;
+  width: 100%;
 }

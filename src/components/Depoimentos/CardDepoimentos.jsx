@@ -8,7 +8,7 @@ const CardDepoimentos = ({ depoimento, nome, avatar }) => {
         <img src={avatar} alt={`Avatar de ${nome}`} className={style.avatarAutor} />
       </div>
       <div>
-        <span>{nome}</span>
+        <h4>{nome}</h4>
         <p>"{depoimento}"</p>
       </div>
 

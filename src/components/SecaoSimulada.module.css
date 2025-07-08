@@ -1,0 +1,13 @@
+.secaoSimulada{
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+
+}
+
+.conteudoSecao{
+    max-width: 1366px;
+    border: 1px solid black;
+    margin: auto;
+
+}
