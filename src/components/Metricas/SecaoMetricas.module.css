@@ -71,12 +71,12 @@
 .secaoMetricas::before {
     content: "";
     position: absolute;
-    top: -15%;
+    top: -10%;
     left: 0;
     width: 247px;
     height: 247px;
     background: url('/vetor-metricas.svg') no-repeat left top;
-    background-size: contain;
-    z-index: 2;
+    background-size: contain; /* Ajusta o tamanho do vetor para caber no espaço disponível */
+    z-index: 2; /* Garante que o vetor fique acima do fundo */
     pointer-events: none;
 }

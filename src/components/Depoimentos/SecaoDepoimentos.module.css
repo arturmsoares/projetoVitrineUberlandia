@@ -4,14 +4,20 @@
 }
 
 .secaoDepoimentos {
-  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: var(--brand-marron);
-  padding: 56px;
-  min-height: 480px;
+  padding: 64px 0;
+
+}
+
+.conteudoDepoimentos {
+  width: 1200px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #fff;
 }
 
 .secaoDepoimentos h3 {
@@ -20,6 +26,8 @@
   margin-bottom: 32px;
 }
 
+
+
 .containerImagemDepoimentos {
   display: flex;
   flex-direction: row;
@@ -27,37 +35,32 @@
   align-items: flex-start;
   width: 100%;
   gap: 0;
-  position: relative; /* Necessário para posicionar a imagem absolutamente */
-  overflow: visible;   /* Permite que a imagem ultrapasse o container */
 }
 
 .containerImagemDepoimentos > div:nth-child(1) {
   position: relative;
   z-index: 2;
+  width: 340px;
   min-width: 340px;
   max-width: 340px;
   margin-right: 0;
   overflow: visible;
   display: flex;
-  align-items: flex-start;
+  align-items: flex-start; 
+  border: 1px solid #fff;
   background-color: green;
-  
 }
 
 .imagemConsultora {
   position: absolute;
-  top: -10px;         /* Colada no topo do div */
-  right: 0;       /* Colada na direita do div */
-  left: -60px;    /* Ultrapassa para a esquerda */
-  bottom: -40px;  /* Ultrapassa para baixo */
-  width: 400px;   /* Ajuste conforme necessário */
-  height: auto;
-  border-radius: 0 16px 16px 0;
+  top: -10px;
+  bottom: -40px;  /* negativo: avança para baixo */
+  right: -2px;
+  height: 600px;  /* aumente conforme necessário */
+  width: auto;
+  border-radius: 16px;
   background: #fff;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.10);
   z-index: 2;
-  object-fit: cover;
-  max-width: none;
 }
 
 .containerImagemDepoimentos > div:nth-child(2) {
@@ -67,5 +70,10 @@
   background-color: #fff;
   border-radius: 0 16px 16px 0;
   padding: 32px 32px 32px 32px;
-  width: 100%;
+  background-image: url('/vetor-depoimentos.svg');
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 180px auto;
+  z-index: 1;
 }
+

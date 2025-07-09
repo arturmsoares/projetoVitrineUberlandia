@@ -7,24 +7,26 @@ import Apresentacao from '../Apresentacao.jsx';
 const SecaoDepoimentos = () => {
   return (
     <section className={style.secaoDepoimentos}>
-      <Apresentacao tituloSecao="Depoimentos" />
-      <div className={style.containerImagemDepoimentos}>
-        <div>
-          <img
-            src="/foto1-Editada.jpg"
-            alt="Consultora"
-            className={style.imagemConsultora}
-          />
-        </div>
-        <div>
-          {depoimentos.map((depoimento, index) => (
-            <CardDepoimentos
-              key={index}
-              depoimento={depoimento.depoimento}
-              nome={depoimento.nome}
-              avatar={depoimento.avatar}
+      <div className={style.conteudoDepoimentos}>
+          <Apresentacao tituloSecao="Depoimentos" />
+        <div className={style.containerImagemDepoimentos}>
+          <div>
+            <img
+              src="/foto1-Editada.jpg"
+              alt="Consultora"
+              className={style.imagemConsultora}
             />
-          ))}
+          </div>
+          <div>
+            {depoimentos.map((depoimento, index) => (
+              <CardDepoimentos
+                key={index}
+                depoimento={depoimento.depoimento}
+                nome={depoimento.nome}
+                avatar={depoimento.avatar}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>
