@@ -9,8 +9,6 @@
     width: 1200px;
     margin: auto;
     padding: 20px;
-    border: 1px solid black;
-
 }
 
 .secaoMetricas {
@@ -25,8 +23,8 @@
 .metricasTipoDois {
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centraliza verticalmente */
-    align-items: center; /* Centraliza horizontalmente */
+    justify-content: center; 
+    align-items: center; 
     border: 1px solid #7D0000;
     text-align: center;
     width: 600px;
@@ -34,7 +32,6 @@
     padding: 20px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    /* dois colunas de igual largura */
     border-radius: 12px;
     background-color: white;
     font-size: 1.4rem;
@@ -59,11 +56,10 @@
     width: 100%;
     position: relative;
     z-index: 2;
-    padding: 30px;
 }
 
 .containerMetricas>div {
-    margin: 20px; /* Espaçamento entre os blocos para a div filha */
+    margin: 20px;
 
 }
 

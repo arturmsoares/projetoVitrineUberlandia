@@ -17,7 +17,6 @@
   width: 1200px;
   margin: auto;
   padding: 20px;
-  border: 1px solid #fff;
 }
 
 .secaoDepoimentos h3 {
@@ -46,8 +45,6 @@
   overflow: visible;
   display: flex;
   align-items: flex-start; 
-  border: 1px solid #fff;
-  background-color: green;
 }
 
 .imagemConsultora {
